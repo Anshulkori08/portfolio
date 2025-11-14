@@ -1,7 +1,7 @@
 import { FileText, ExternalLink, Mail, Linkedin, Github, Code } from 'lucide-react';
 import useTypingEffect from '../hooks/useTypingEffect';
 import portfolioData from '../data/portfolioData';
-
+import { FaBeer as Icon } from 'react-icons/fa'
 const HeroSection = () => {
   const { name, titles, links } = portfolioData.personal;
   const typedText = useTypingEffect(titles, 80, 40, 1600);
@@ -64,7 +64,7 @@ const HeroSection = () => {
             { icon: Linkedin, href: links.linkedin, label: "LinkedIn" },
             { icon: Github, href: links.github, label: "GitHub" },
             { icon: Code, href: links.codeforces ?? '#', label: "Code" }
-          ].map(({ icon: Icon, href, label }) => (
+          ].map(({  href, label }) => (
             <a
               key={label}
               href={href}

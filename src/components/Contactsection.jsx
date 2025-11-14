@@ -1,6 +1,6 @@
 import { Mail, Linkedin, Github } from 'lucide-react';
 import portfolioData from '../data/portfolioData';
-
+import { FaBeer as Icon } from 'react-icons/fa';
 const ContactSection = () => {
   const { email, links } = portfolioData.personal;
 
@@ -42,7 +42,7 @@ const ContactSection = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {contacts.map(({ icon: Icon, label, href, value, bg, accent }) => (
+          {contacts.map(({  label, href, value, bg, accent }) => (
             <a
               key={label}
               href={href}
